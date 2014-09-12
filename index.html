@@ -1,74 +1,156 @@
-<!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Dotzhengda.github.io : My GitHub page">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="./CSS/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css?version=0913" />
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<body>
+    <ul id="Menu">
+        <li data-menuanchor="startPage" class="active"><a href="#startPage">Home</a>
+        </li>
+        <li data-menuanchor="Web Dev"><a href="#Web Dev">Web Dev</a>
+        </li>
+        <li data-menuanchor="Android Dev"><a href="#Android Dev">Android Dev</a>
+        </li>
+        <li data-menuanchor="toDo"><a href="#toDo">ToDo</a>
+        </li>
+    </ul>
+    <div id="fullpage">
+        <div class="section fp-section fp-table">
+            <h1>
+                    Welcome
+                </h1>
+            <p>to my GitHub page
+            </p>
+        </div>
+        <div class="section">
+            <div class="slide" data-anchor="Blabla">
+                <div>
+                    <h2>A javascript text flyer</br>
+                </h2>
+                <p>javascript 弹幕</p></br>
+                    <a href="https://github.com/dotZhengda/Blabla" class="button-left" style="margin-right:30px">GitHub</a>
+                    <a class="button-right" style="margin-left:30px" href="javascript: (function() {
+   if (!window.$||!window.jQuery) {
+   var jsCode = document.createElement('script');
+   jsCode.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+   document.body.appendChild(jsCode);
+}
+function getRandomCodes() {
+codes = ['SOP. A bribe. A sop for Cerberus; a bribe for a porter,turnkey, or gaoler.',
+'One planet is all you get',
+'老板，结帐。多少个盘子？',
+'哈哈，终于要下班啦',
+'2014-09-02',
+'Eating chocolate is like being in love without the aggravation',
+'Democracy is good.  I say this because other systems are worse.',
+'Sample codes from http://www.iheartquotes.com/api/v1/random'
+];
+return codes[Math.floor(Math.random() * codes.length)];
+}
 
-    <title>Dotzhengda.github.io</title>
-  </head>
+function getCssString() {
+style = [
+'.barge {',
+'position: absolute;',
+'left: 0px;',
+'top: 0px;',
+'overflow:hidden;',
+'/*opacity: 0.5;*/',
+'height: 100%25;',
+'width: 100%25;',
+'pointer-events: none;',
+'display: flex;',
+'z-index: 1000;',
+'}',
+'.bargeText {',
+'position:absolute;',
+'font-size:26px;',
+'width: 100%25;',
+'margin-left:100%25;}',
+];
+return style.join('\n');
+}
 
-  <body>
+window.Blabla = {
+setBarge: function(targetElement) {
+if (jQuery('.barge').size() == 0) {
+var style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = getCssString();
+document.head.appendChild(style);
+var element = document.createElement('div');
+element.className = 'barge';
+if (targetElement === undefined) {
+jQuery('body').append(element);
+} else {
+targetElement.append(element);
+}
+}
+},
+say: function(text) {
+var color = ['red', 'black', 'white', 'blue', 'red', 'blue'];
+var element = document.createElement('div');
+jQuery('.barge').append(element);
+element.innerHTML = text;
+element.className = 'bargeText';
+element.style.color = color[Math.floor(Math.random() * color.length)];
+element.style['top'] = Math.floor(5 + Math.random() * 80) + '%25';
+var anitimeout = (Math.random() * 5.0 + 1.5).toFixed(1);
+var aniTime = 'all ' + anitimeout + 's cubic-bezier(.07,.47,.98,.57)';
+element.style['transition'] = aniTime;
+element.style['-moz-transition'] = aniTime;
+element.style['-webkit-transition'] = aniTime;
+element.style['-o-transition'] = aniTime;
+setTimeout(function() {
+jQuery(element).css('transform', 'translateX(-200%25)');
+jQuery(element).css('-webkit-transform', 'translateX(-200%25)');
+}, 300);
+setTimeout(function() {
+jQuery(element).remove();
+}, anitimeout * 1000 + 1000);
+},
+sing: function(number) {
+if (typeof number == 'number' && number == parseInt(number)) {
+for (var i = 0; i < number; i++) {
+setTimeout(function() {
+Blabla.say(getRandomCodes());
+}, Math.random() * 6000);
+}
+}
+}
+};
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/dotZhengda">View on GitHub</a>
+if (!window.$||!window.jQuery) {
+setTimeout(function() {
+Blabla.setBarge();
+Blabla.sing(14);
+}, 1000);
+} else {
+Blabla.setBarge();
+Blabla.sing(14);
+}
+}());">Demon</a></br></br>
+                </div>
+                <div class="fp-table" style="border: 2px solid #1bbc9b;
+            border-radius: 5px;">
+                    <img src="./Images/sample.png" alt="Sample Effect on Google" height=" 500" width="750" title="Sample Effect on Google">
+                </div>
 
-          <h1 id="project_title">Dotzhengda.github.io</h1>
-          <h2 id="project_tagline">My GitHub page</h2>
-
-        </header>
+            </div>
+            <div class="slide" data-anchor="TaskHub">Slide 2</div>
+        </div>
+        <div class="section"></div>
+        <div class="section"></div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="./JS/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="./JS/main.js?version=0913"></script>
+</body>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
