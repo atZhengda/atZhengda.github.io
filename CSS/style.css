@@ -3,125 +3,118 @@
 /* Reset CSS
  * --------------------------------------- */
 
-.image-thumbnail{
-    box-shadow:2px solid white;
+.image-thumbnail {
+    box-shadow: 2px solid white;
     width: 160px;
     height: 120px;
 }
-
-a.lightbox img {
-height: 150px;
-border: 3px solid white;
-box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-margin: 20px;
+.table-center {
+    margin: 0 auto;
 }
-
+a.lightbox img {
+    height: 150px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+    margin: 20px;
+}
 /* Styles the lightbox, removes it from sight and adds the fade-in transition */
 
 .lightbox-target {
-position: fixed;
-top: -100%;
-width: 100%;
-background: rgba(0,0,0,.7);
-width: 100%;
-opacity: 0;
--webkit-transition: opacity .5s ease-in-out;
--moz-transition: opacity .5s ease-in-out;
--o-transition: opacity .5s ease-in-out;
-transition: opacity .5s ease-in-out;
-overflow: hidden;
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
 }
-
 /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
 
 .lightbox-target img {
-margin: auto;
-position: absolute;
-top: 0;
-left:0;
-right:0;
-bottom: 0;
-max-height: 0%;
-max-width: 0%;
-border: 3px solid white;
-box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-box-sizing: border-box;
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
-
 /* Styles the close link, adds the slide down transition */
 
 a.lightbox-close {
-display: block;
-width:50px;
-height:50px;
-box-sizing: border-box;
-background: white;
-color: black;
-text-decoration: none;
-position: absolute;
-top: -80px;
-right: 0;
--webkit-transition: .5s ease-in-out;
--moz-transition: .5s ease-in-out;
--o-transition: .5s ease-in-out;
-transition: .5s ease-in-out;
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
-
 /* Provides part of the "X" to eliminate an image from the close link */
 
 a.lightbox-close:before {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(45deg);
--moz-transform:rotate(45deg);
--o-transform:rotate(45deg);
-transform:rotate(45deg);
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
-
 /* Provides part of the "X" to eliminate an image from the close link */
 
 a.lightbox-close:after {
-content: "";
-display: block;
-height: 30px;
-width: 1px;
-background: black;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(-45deg);
--moz-transform:rotate(-45deg);
--o-transform:rotate(-45deg);
-transform:rotate(-45deg);
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 26px;
+    top: 10px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
-
 /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
 
 .lightbox-target:target {
-opacity: 1;
-top: 0;
-bottom: 0;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
 }
-
 .lightbox-target:target img {
-max-height: 100%;
-max-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
-
 .lightbox-target:target a.lightbox-close {
-top: 0px;
+    top: 0px;
 }
-
 body,
 div,
 dl,
@@ -207,91 +200,94 @@ acronym {
  * --------------------------------------- */
 
 .button-left {
-	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
-	background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e');
-	background-color:#f0c911;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
-	-moz-border-radius-bottomright:10px;
-	border-bottom-right-radius:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-moz-border-radius-bottomleft:10px;
-	border-bottom-left-radius:10px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:37px;
+	-moz-border-radius-topright:37px;
+	border-top-right-radius:37px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:37px;
+	-moz-border-radius-bottomleft:37px;
+	border-bottom-left-radius:37px;
 	text-indent:0;
-	border:4px solid #e65f44;
+	border:1px solid #268a16;
 	display:inline-block;
-	color:#c92200;
+	color:#306108;
 	font-family:Georgia;
 	font-size:15px;
 	font-weight:bold;
 	font-style:normal;
-	height:33px;
-	line-height:33px;
-	width:96px;
+	height:40px;
+	line-height:40px;
+	width:88px;
 	text-decoration:none;
 	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
 }
 .button-left:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911) );
-	background:-moz-linear-gradient( center top, #f2ab1e 5%, #f0c911 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
-	background-color:#f2ab1e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
 }.button-left:active {
 	position:relative;
 	top:1px;
 }
+
 .button-right {
-	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	box-shadow:inset 0px 1px 0px 0px #f9eca0;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
-	background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e');
-	background-color:#f0c911;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-	border-top-left-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
-	border-top-right-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
-	-moz-border-radius-bottomright:10px;
-	border-bottom-right-radius:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-moz-border-radius-bottomleft:10px;
-	border-bottom-left-radius:10px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:37px;
+	-moz-border-radius-topleft:37px;
+	border-top-left-radius:37px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:37px;
+	-moz-border-radius-bottomright:37px;
+	border-bottom-right-radius:37px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
 	text-indent:0;
-	border:4px solid #e65f44;
+	border:1px solid #268a16;
 	display:inline-block;
-	color:#c92200;
+	color:#306108;
 	font-family:Georgia;
 	font-size:15px;
 	font-weight:bold;
 	font-style:normal;
-	height:33px;
-	line-height:33px;
-	width:96px;
+	height:40px;
+	line-height:40px;
+	width:88px;
 	text-decoration:none;
 	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
 }
 .button-right:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911) );
-	background:-moz-linear-gradient( center top, #f2ab1e 5%, #f0c911 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
-	background-color:#f2ab1e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
 }.button-right:active {
 	position:relative;
 	top:1px;
-}
+} 
 
 body {
     font-family: arial, helvetica;
@@ -481,9 +477,11 @@ p {
 /* Demos Menu
  * --------------------------------------- */
 
-#demosMenu {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 999;
+ul {
+    list-style-type: square;
+}
+li {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: black;
 }
