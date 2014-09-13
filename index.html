@@ -4,6 +4,7 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <link rel="stylesheet" type="text/css" href="./CSS/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/style.css?version=0913" />
 </head>
 
@@ -31,7 +32,8 @@
                 <div>
                     <h2>A javascript text flyer</br>
                 </h2>
-                <p>javascript 弹幕</p></br>
+                    <p>javascript 弹幕</p>
+                    </br>
                     <a href="https://github.com/dotZhengda/Blabla" class="button-left" style="margin-right:30px">GitHub</a>
                     <a class="button-right" style="margin-left:30px" href="javascript: (function() {
    if (!window.$||!window.jQuery) {
@@ -133,13 +135,26 @@ Blabla.sing(14);
 Blabla.setBarge();
 Blabla.sing(14);
 }
-}());">Demon</a></br></br>
-                </div>
-                <div class="fp-table" style="border: 2px solid #1bbc9b;
-            border-radius: 5px;">
-                    <img src="./Images/sample.png" alt="Sample Effect on Google" height=" 500" width="750" title="Sample Effect on Google">
-                </div>
+}());">Demon</a>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <div class="fp-table">
 
+                        <a href="./Images/sample.png" data-lightbox="demonbox">
+                            <img class="image-thumbnail" src="./Images/sample.png" alt="Sample Effect on Google" title="Sample Effect on Google">
+                        </a>
+                        <a href="./Images/sample2.png" data-lightbox="demonbox">
+                            <img class="image-thumbnail" src="./Images/sample2.png" alt="Sample Effect on Google" title="Sample Effect on a blank page">
+                        </a>
+                        <a href="./Images/sample3.png" data-lightbox="demonbox">
+                            <img class="image-thumbnail" src="./Images/sample3.png" alt="Sample Effect on Google" title="Sample Effect on Youtube">
+                        </a>
+                    </div>
+
+                </div>
             </div>
             <div class="slide" data-anchor="TaskHub">Slide 2</div>
         </div>
@@ -149,6 +164,7 @@ Blabla.sing(14);
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script src="vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="JS/lightbox.min.js"></script>
     <script type="text/javascript" src="./JS/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="./JS/main.js?version=0913"></script>
 </body>
