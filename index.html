@@ -3,40 +3,50 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="./CSS/loading.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="./CSS/style.css?version=0913" />
 </head>
 
 <body>
-    <ul id="Menu">
-        <li data-menuanchor="startPage" class="active"><a href="#startPage">Home</a>
-        </li>
-        <li data-menuanchor="Web Dev"><a href="#Web Dev">Web Dev</a>
-        </li>
-        <li data-menuanchor="Android Dev"><a href="#Android Dev">Android Dev</a>
-        </li>
-        <li data-menuanchor="toDo"><a href="#toDo">ToDo</a>
-        </li>
-    </ul>
-    <div id="fullpage">
-        <div class="section fp-section fp-table">
-            <h2>You have reached</h2>
-            <p>Zhengda's GitHub page <SUB><a href="https://github.com/atZhengda"> <img src="./Images/logo.png" style="height:35px;"></a></SUB>
-            </p>
-            
-            </br>
-            </br>
+    <div class="mcontainer">
+        <div class="spinner ">
         </div>
-        <div class="section">
-            <div class="slide" data-anchor="Blabla">
-                <div>
-                    <h2>A javascript text flyer</br>
+        <div class="mtext">
+            Loading...
+        </div>
+    </div>
+    <div id="main" style="display:none">
+        <ul id="Menu">
+            <li data-menuanchor="startPage" class="active"><a href="#startPage">Home</a>
+            </li>
+            <li data-menuanchor="Web Dev"><a href="#Web Dev">Web Dev</a>
+            </li>
+            <li data-menuanchor="Android Dev"><a href="#Android Dev">Android Dev</a>
+            </li>
+            <li data-menuanchor="toDo"><a href="#toDo">ToDo</a>
+            </li>
+        </ul>
+        <div id="fullpage">
+            <div class="section fp-section fp-table">
+                <h2>You have reached</h2>
+                <p>Zhengda's GitHub page
+                    <SUB><a href="https://github.com/atZhengda"> <img src="./Images/logo.png" style="height:35px;"></a></SUB>
+                </p>
+
+                </br>
+                </br>
+            </div>
+            <div class="section">
+                <div class="slide" data-anchor="Blabla">
+                    <div>
+                        <h2>A javascript text flyer</br>
                 </h2>
-                    <p>javascript 弹幕</p>
-                    </br>
-                    <a href="https://github.com/atZhengda/Blabla" class="button-left" style="margin-right:30px">GitHub</a>
-                    <a class="button-right" style="margin-left:30px" href="javascript: (function() {
+                        <p>javascript 弹幕</p>
+                        </br>
+                        <a href="https://github.com/atZhengda/Blabla" class="button-left" style="margin-right:30px">GitHub</a>
+                        <a class="button-right" style="margin-left:30px" href="javascript: (function() {
    if (!window.$||!window.jQuery) {
    var jsCode = document.createElement('script');
    jsCode.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
@@ -137,63 +147,63 @@ Blabla.setBarge();
 Blabla.sing(14);
 }
 }());">Demon</a>
-                    </br>
-                    </br>
-                    </br>
-                    </br>
-                    </br>
-                    <div class="fp-table">
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                        <div class="fp-table">
 
-                        <a href="./Images/sample.png" data-lightbox="demonbox">
-                            <img class="image-thumbnail" src="./Images/sample.png" alt="Sample Effect on Google" title="Sample Effect on Google">
-                        </a>
-                        <a href="./Images/sample2.png" data-lightbox="demonbox">
-                            <img class="image-thumbnail" src="./Images/sample2.png" alt="Sample Effect on Google" title="Sample Effect on a blank page">
-                        </a>
-                        <a href="./Images/sample3.png" data-lightbox="demonbox">
-                            <img class="image-thumbnail" src="./Images/sample3.png" alt="Sample Effect on Google" title="Sample Effect on Youtube">
-                        </a>
+                            <a href="./Images/sample.png" data-lightbox="demonbox">
+                                <img class="image-thumbnail" src="./Images/sample.png" alt="Sample Effect on Google" title="Sample Effect on Google">
+                            </a>
+                            <a href="./Images/sample2.png" data-lightbox="demonbox">
+                                <img class="image-thumbnail" src="./Images/sample2.png" alt="Sample Effect on Google" title="Sample Effect on a blank page">
+                            </a>
+                            <a href="./Images/sample3.png" data-lightbox="demonbox">
+                                <img class="image-thumbnail" src="./Images/sample3.png" alt="Sample Effect on Google" title="Sample Effect on Youtube">
+                            </a>
+                        </div>
+
                     </div>
+                </div>
+                <div class="slide" data-anchor="TaskHub">
+                    <h2>A C# task hub</br>
+                </h2>
+                    <p>Run functions in job list or async ways</p>
+                    </br>
+                    </br>
+                    <table class="table-center">
+                        <tr>
+                            <td width="25%" style="text-align:center">
+                                <img src="./Images/queue.png" alt="Queued data processing functions" title="Queued data processing functions" style="width:50px;">
+                            </td>
+                            <td width="5%"></td>
+                            <td width="450px">
+                                <ul>
+                                    <li>Run normal(synchronous) functions as async task, which can be waited anywhere inside your program</li>
+                                    <li>Run heavy data processing functions in background, while keep your common accessed data safe</li>
+                                    <li>No modification of existing functions required
+                                    </li>
+                                </ul>
 
+                            </td>
+                        </tr>
+
+                        <tr style="margin-top:10px">
+                            <td></td>
+                            <td></td>
+                            <td style="text-align:right">
+                                <h3>Intrested? Check it out <a href="https://github.com/atZhengda/TaskHub">here!</a></h3>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div class="slide" data-anchor="TaskHub">
-                <h2>A C# task hub</br>
-                </h2>
-                <p>Run functions in job list or async ways</p>
-                </br>
-                </br>
-                <table class="table-center">
-                    <tr>
-                        <td width="25%" style="text-align:center">
-                            <img src="./Images/queue.png" alt="Queued data processing functions" title="Queued data processing functions" style="width:50px;">
-                        </td>
-                        <td width="5%"></td>
-                        <td width="450px">
-                            <ul>
-                                <li>Run normal(synchronous) functions as async task, which can be waited anywhere inside your program</li>
-                                <li>Run heavy data processing functions in background, while keep your common accessed data safe</li>
-                                <li>No modification of existing functions required
-                                </li>
-                            </ul>
-
-                        </td>
-                    </tr>
-
-                    <tr style="margin-top:10px">
-                        <td></td>
-                        <td></td>
-                        <td style="text-align:right">
-                            <h3>Intrested? Check it out <a href="https://github.com/atZhengda/TaskHub">here!</a></h3>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            <div class="section"></div>
+            <div class="section"></div>
         </div>
-        <div class="section"></div>
-        <div class="section"></div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script src="vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="JS/lightbox.min.js"></script>
