@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('.mcontainer').slideUp();
         $('#main').show();
         $('#fullpage').fullpage({
-            sectionsColor: ['#f2f2f2', '#62c9f7', '#7ef5dd', '#3b9dfa', 'whitesmoke'],
+            sectionsColor: ['#f2f2f2', '#62c9f7', '#f2f2f2', '#3b9dfa', 'whitesmoke'],
             anchors: ['startPage', 'Web Dev', 'VBA', 'Android Dev', 'toDo'],
             menu: '#Menu',
         });
